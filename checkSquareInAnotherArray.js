@@ -32,28 +32,26 @@
 // case obj1={1:1, 2:2,  4:1, 5:1 } iski key 2ndarray ka square hain or iski value 2nd array value same hogi hamesha
 // case obj2={1:1, 4:2,  16:1, 25: 1}
 
-const checkSquare = (Array1, Array2) => {
-  let obj1 = {};
-  let obj2 = {};
-  for (const item1 of Array1) {
-    obj1[item1] = (obj1[item1] || 0) + 1;
-  }
-
-  for (const item2 of Array2) {
-    obj2[item2] = (obj2[item2] || 0) + 1;
-  }
-
-  for (const key in obj1) {
-    if (!obj2[key * key]) {
-        return false;
+const chectSquare = (Array1,Array2) => {
+    let obj1 = {}
+    let obj2 = {}
+    for (const item1 of Array1) {
+        obj1[item1] = (obj1[item1] || 0 ) + 1
     }
-    
-    if (obj1[key] !== obj2[key * key]) {
-      return false;
+    for (const item2 of Array2) {
+        obj2[item2] = (obj2[item2] || 0 ) + 1
     }
-  }
-  return true;
-};
 
-const result = checkSquare([1, 2, 5], [1, 4, 25]);
-console.log(result);
+    for (let key in obj1) {
+        if(!obj2[key * key]){
+            return false
+        }
+        if(obj1[key] !== obj2[key * key]){
+            return false
+        }
+    }
+    return true;
+}
+
+const result = chectSquare([1,2,3],[1,4,9])
+console.log(result)
