@@ -35,3 +35,23 @@ function checkSumZero(myArray) {
 
 const result = checkSumZero([-5, -4, -3, 0, 2, 4, 6, 8]);
 console.log(result);
+
+// check anagram string "Milad" => "dalim"
+
+const anagram = (str) => {
+  let result = [];
+  function helperRecursive(myString) {
+    const result = myString.split("");
+    console.log(typeof result);
+    if (myString) {
+      result.push(myString[0]);
+    }
+    helperRecursive(myString.slice(1));
+  }
+
+  helperRecursive(str);
+  return result;
+};
+
+const result2 = anagram("milad");
+console.log(result2);
