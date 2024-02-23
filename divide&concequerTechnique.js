@@ -6,7 +6,7 @@
 // let max = array.length - 1  // element 15 // index = 14
 // let midIndex = min + max / 2 = 7(index) 8(element)
 // if(array[midIndex] < number(7))
-// min =minIndex+1
+// min = minIndex+1
 // if(array[midIndex] > number(7))
 // max = midIndex-1 // min= 0; max = 6 {1,2,3,4,5,6,7}
 // min + max / 2 = 3
